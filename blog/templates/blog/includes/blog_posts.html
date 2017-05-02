@@ -1,0 +1,26 @@
+{% load staticfiles %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+{% block content %}
+
+    {% if all_posts %}
+{% for user in all_posts|slice:":1:" %}
+    <h1 align="center"><u>{{ user.auth_user }}'s blog!</u></h1>
+
+    {% endfor %}
+
+    <ul>
+        {% for post in all_posts %}
+       <a href="/blog/{{ post.id }}"></a>
+            <h1>{{ post.title }}</h1>
+            {{ post.blog_post }}
+            <h6>{{ post.time_date }}</h6><hr>
+        {% endfor %}
+
+    </ul>
+{% else %}
+    <h3>No posts found, try again later!</h3>
+{% endif %}
+
+{% endblock %}
+

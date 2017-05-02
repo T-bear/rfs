@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <!-- loads the path to your static files -->
+    {% load staticfiles %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+{% if user.is_authenticated %}
+    {% include "blog/includes/navbar.html" %}
+{% endif %}
+    <div class="user_info">
+        <h1>{{ user.first_name }} {{ user.last_name }}</h1>
+    </div>
+
+{% for info in profile_info|slice:":1"  %}
+    <img class="profile_pic" src="{{ info.profile_pic }}">
+    <div class="profile_info">
+        <div class="row">
+            <div class="col-sm-4">{{ info.profile_info }}</div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4"></div>
+        </div>
+    </div>
+
+
+{% endfor %}
+
+
+</body>
+</html>
