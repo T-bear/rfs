@@ -20,11 +20,13 @@ def detail(request, auth_user_id):
     user = auth_user_id
     all_posts = all_posts.filter(auth_user_id=user)
 
-    return render(request, 'blog/detail.html', {'all_posts': all_posts,})
+    return render(request, 'blog/detail.html', {'all_posts': all_posts})
 
-def profile(request):
-    user_info = User.objects.all()
-    return render(request, 'blog/profile.html', {'user_info':user_info,})
+def profile(request,auth_user_id):
+    all_posts = Posts.objects.order_by('-time_date')
+    user = auth_user_id
+    all_posts = all_posts.filter(auth_user_id=user)
+    return render(request, 'blog/profile.html', {'all_posts': all_posts})
 
 def logout_view(request):
     logout(request)

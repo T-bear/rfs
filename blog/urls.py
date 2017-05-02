@@ -18,7 +18,7 @@ urlpatterns = [
     url(r'^logout/', auth_views.logout, {'next_page': '/blog/login'}, name='logout'),
     #blog/login, after logout it redirects back to the loginpage.
 
-    url(r'^profile/', views.profile, name='profile'),
+    url(r'^profile/(?P<auth_user_id>[0-9]+)', views.profile, name='profile'),
     #/detail.
 
     url(r'^admin/', admin.site.urls),

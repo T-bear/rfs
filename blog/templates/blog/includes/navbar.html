@@ -4,7 +4,7 @@
     <ul class="nav nav-tabs">
     <li class="navbar-text">Welcome {{ user.username }}</li>
   <li role="presentation"><a href="{% url 'blog:index' %}">Home</a></li>
-  <li role="presentation"><a href="{% url 'blog:profile' %}">Profile</a></li>
+  <li role="presentation"><a href="/blog/profile/{{ user.id }}" > Profile</a></li>
   <li role="presentation"><a href="/blog/posts-add/{{ user.id }}">New blogpost</a></li>
         <li role="presentation"><a href="{% url 'blog:logout' %}">Logout</a></li>
 {% else %}
