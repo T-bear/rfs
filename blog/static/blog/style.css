@@ -1,4 +1,117 @@
-.user_info{
+/*Profile */
+.user_name{
+    text-align: center;
     font-size: 72px;
-    background: aqua;
+
 }
+
+.profile_info{
+    text-align: center;
+
+}
+.profile_pic{
+    height: 357%;
+    width: 35%;
+    text-align: center;
+    border-radius: 10px;
+}
+.profile_info_info{
+    border-style: solid;
+    border-width: 1px;
+    padding: 1%;
+    margin-top: 3%;
+    font-family: quicksand;
+
+}
+/* Start */
+.welcome {
+    text-align: center;
+    font-family: quicksand;
+
+}
+
+body {
+    background-image: url("images/kant_Blogg.png"), url("images/kant_Blogg2.png");
+    background-position: left, right;
+    height: 100%;
+    width: auto;
+    background-repeat: repeat-y;
+    font-family: quicksand;
+}
+
+/* blog_posts */
+.post{
+    text-align: center;
+}
+
+.no_post{
+    text-align: center;
+    margin-top: 20%;
+}
+/* navbar */
+.brand{
+    height: 100%;
+    width: auto;
+}
+
+.brand_holder{
+    height: 10%;
+    width: 17%;
+    margin-bottom: 200%;
+    padding: -10%;
+}
+
+.container-fluid  {
+    align-content: center;
+    font-family: quicksand;
+    box-shadow: 0px 0px 5px #888888;
+    border-radius: 0px;
+    border-top: none;
+}
+
+/* all posts in home */
+.all_posts{
+    margin-top: 3%;
+    align-content: center;
+}
+
+.list-group-item{
+    text-align: center;
+    letter-spacing: 3px;
+    margin-left: auto;
+    margin-right: 30%;
+}
+
+.add_posts {
+    margin-top: 10%;
+    align-content: center;
+    font-family: quicksand;
+}
+
+.newpost {
+     text-align: center;
+}
+
+h1{
+    text-align: center;
+    font-family: quicksand;
+}
+
+h2{
+    font-size: 15px;
+}
+.font{
+    font-family: quicksand;
+}
+
+.form-row input{
+    font-family: quicksand;
+}
+.form-row textarea{
+    font-family: quicksand;
+}
+
+.container{
+    background-color: yellowgreen;
+}
+

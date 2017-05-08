@@ -1,8 +1,29 @@
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'blog/style.css' %}" type='text/css'/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
 {% if user.is_authenticated %}
 {% include "blog/includes/navbar.html" %}
 {% endif %}
-<form action="" method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Submit" />
-</form>
+
+<div class="add_posts">
+    <div class="container">
+    <div class="row">
+    <div class="col-sm-4"></div>
+    <div class="col-sm-4">
+        <h1>Add title and write your blogpost</h1>
+        <div class="newpost">
+        <form class="form-row" action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <input  type="submit" value="Submit" />
+
+        </form>
+        </div>
+    <div class="col-sm-4"></div>
+        </div>
+
+    </div>
+    </div>

@@ -1,25 +1,41 @@
 {% load staticfiles %}
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static '/blog/style.css' %}" type='text/css'/>
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
 {% block content %}
 
     {% if all_posts %}
 {% for user in all_posts|slice:":1:" %}
-    <h1 align="center"><u>{{ user.auth_user }}'s blog!</u></h1>
+    <div><h1 class="user_name"><u>{{ user.auth_user }}'s blog!</u></h1></div>
 
     {% endfor %}
 
     <ul>
         {% for post in all_posts %}
-       <a href="/blog/{{ post.id }}"></a>
-            <h1>{{ post.title }}</h1>
-            {{ post.blog_post }}
-            <h6>{{ post.time_date }}</h6><hr>
+
+    <div class="post">
+    <div class="container">
+            <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4"><a href="/blog/{{ post.id }}"><br></a><h1>{{ post.title }}</h1><h2>{{ post.blog_post }}</h2><h6>{{ post.time_date }}</h6><hr></div>
+            <div class="col-sm-4"></div>
+        </div>
+
+    </div>
+    </div>
+
+
+
+
+        <div class="post">
+
+        </div>
         {% endfor %}
 
     </ul>
 {% else %}
-    <h3>No posts found, try again later!</h3>
+        <div class="no_post">No posts found, try again later!</div>
 {% endif %}
 
 {% endblock %}

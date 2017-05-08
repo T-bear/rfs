@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
     {% load staticfiles %}
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
-<body>
+<link rel="stylesheet" href="{% static 'blog/style.css' %}" type='text/css'/>
+<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+    {% if user.is_authenticated %}
+
+    {% else %}
+    {% include "blog/includes/navbar_guest.html" %}
+    {% endif %}
 
 {% include "blog/includes/navbar.html" %}
 {% include "blog/includes/blog_posts.html" %}
 
-</body>
-</html>
+
