@@ -16,6 +16,7 @@ def index(request):
 
 #shows all posts and filter it by users url.
 def detail(request, auth_user_id):
+
     all_posts = Posts.objects.order_by('-time_date')
     user = auth_user_id
     all_posts = all_posts.filter(auth_user_id=user)
@@ -55,7 +56,7 @@ def get_name(request, auth_user_id):
     else:
         form = PostsAdd()
 
-    return render(request, 'blog/posts-add.html', {'form': form, 'id': auth_user_id} )
+    return render(request, 'blog/posts-add.html', {'form': form, 'id': auth_user_id})
 
 
 
