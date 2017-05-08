@@ -34,7 +34,7 @@
 body {
     background-image: url("images/kant_Blogg.png"), url("images/kant_Blogg2.png");
     background-position: left, right;
-    height: 100%;
+    height: 100000000000%;
     width: auto;
     background-repeat: repeat-y;
     font-family: quicksand;
@@ -106,14 +106,20 @@ h2{
     font-family: quicksand;
 }
 
+#form-row .form-row {
+    align-content: center;
+}
+
 .form-row input{
     font-family: quicksand;
+
 }
 .form-row textarea{
     font-family: quicksand;
+    align-content: center;
 }
 
-.container{
-
+.container .form-row{
+align-content: center;
 }
 

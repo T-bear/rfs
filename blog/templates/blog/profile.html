@@ -1,13 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
 
-    <!-- loads the path to your static files -->
-{% load staticfiles %}
+  <title>The HTML5 Herald</title>
+  {% load staticfiles %}
 <link rel="stylesheet" href="{% static 'blog/style.css' %}" type='text/css'/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
 
+</head>
 
-{% if user.is_authenticated %}
+<body>
+  {% if user.is_authenticated %}
     {% include "blog/includes/navbar.html" %}
 {% endif %}
 <div class="user_name">
@@ -34,5 +40,5 @@
 </div>
 
 {% endfor %}
-
-
+</body>
+</html>

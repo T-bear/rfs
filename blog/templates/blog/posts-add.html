@@ -10,19 +10,22 @@
 <div class="add_posts">
     <div class="container">
     <div class="row">
-    <div class="col-sm-4"></div>
-    <div class="col-sm-4">
+    <div class="col-m-4"></div>
+    <div id="form-row" class="col-m-4">
         <h1>Add title and write your blogpost</h1>
-        <div class="newpost">
+
         <form class="form-row" action="" method="post">
         {% csrf_token %}
+        {{ form.media }}
         {{ form.as_p }}
+
+
 
         <input type="submit" value="Submit" />
 
         </form>
-        </div>
-    <div class="col-sm-4"></div>
+
+    <div class="col-m-4"></div>
         </div>
 
     </div>

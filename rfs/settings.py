@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import tempfile
 import rfs.key
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -32,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'ckeditor',
     'blog.apps.BlogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -73,6 +75,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'rfs.wsgi.application'
 
 LOGIN_REDIRECT_URL = '/detail'
+
 
 
 # Database
@@ -122,4 +125,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+
+
+
 STATIC_URL = '/static/blog/'
+STATIC_ROOT = os.path.join('bucky', '/static/blog/')
+CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'
+MEDIA_ROOT = os.path.join(tempfile.gettempdir(), 'ck_media')
+MEDIA_URL = '/media/'

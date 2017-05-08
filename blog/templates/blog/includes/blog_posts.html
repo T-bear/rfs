@@ -2,8 +2,10 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="{% static '/blog/style.css' %}" type='text/css'/>
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 {% block content %}
+
 
     {% if all_posts %}
 {% for user in all_posts|slice:":1:" %}
@@ -18,7 +20,7 @@
     <div class="container">
             <div class="row">
             <div class="col-sm-4"></div>
-            <div class="col-sm-4"><a href="/blog/{{ post.id }}"><br></a><h1>{{ post.title }}</h1><h2>{{ post.blog_post }}</h2><h6>{{ post.time_date }}</h6><hr></div>
+            <div id="funkarinte" class="col-sm-4"><h1 id="title">{{ post.title }}</h1><h2 id="blog_post">{{ post.blog_post|safe }}</h2><h6>{{ post.time_date }}</h6><hr></div>
             <div class="col-sm-4"></div>
         </div>
 
@@ -27,10 +29,6 @@
 
 
 
-
-        <div class="post">
-
-        </div>
         {% endfor %}
 
     </ul>

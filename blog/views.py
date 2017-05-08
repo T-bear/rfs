@@ -43,7 +43,7 @@ def get_name(request, auth_user_id):
         form = PostsAdd(request.POST)
         print(request.POST['titel'])
         print(request.POST['blog_post'])
-        p = Posts(auth_user_id=auth_user_id ,title=request.POST['titel'], blog_post=request.POST['blog_post'], time_date=datetime.datetime.now(), blog_pic="")
+        p = Posts(auth_user_id=auth_user_id, title=request.POST['titel'], blog_post=request.POST['blog_post'], time_date=datetime.datetime.now(), blog_pic="")
         p.save()
         # check whether it's valid:
         if form.is_valid():

@@ -1,9 +1,20 @@
-    {% load staticfiles %}
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  {% load staticfiles %}
 <link rel="stylesheet" href="{% static 'blog/style.css' %}" type='text/css'/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
-    {% if user.is_authenticated %}
+
+</head>
+
+<body>
+
+   {% if user.is_authenticated %}
 
     {% else %}
     {% include "blog/includes/navbar_guest.html" %}
@@ -12,4 +23,5 @@
 {% include "blog/includes/navbar.html" %}
 {% include "blog/includes/blog_posts.html" %}
 
-
+</body>
+</html>
