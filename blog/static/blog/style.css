@@ -15,6 +15,7 @@
     text-align: center;
     border-radius: 10px;
 
+
 }
 .profile_info_info{
     border-style: solid;
@@ -33,11 +34,11 @@
 
 body {
     background-image: url("images/kant_Blogg.png"), url("images/kant_Blogg2.png");
-    background-position: left, right;
-    height: 100000000000%;
-    width: auto;
+    background-position: left, right, center;
     background-repeat: repeat-y;
+    width: auto;
     font-family: quicksand;
+    top: 0;
 
 }
 
@@ -123,3 +124,22 @@ h2{
 align-content: center;
 }
 
+#rise{
+    height: 1000px;
+}
+.test{
+    padding: 1px;
+    margin-top: 1%;
+    height: auto;
+    width: 30%;
+    text-align: center;
+
+    position: fixed;
+    right: 13%;
+
+
+}
+
+#form-row add{
+    background-color: yellowgreen;
+}

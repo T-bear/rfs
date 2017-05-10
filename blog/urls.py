@@ -19,9 +19,11 @@ urlpatterns = [
     #blog/login, after logout it redirects back to the loginpage.
 
     url(r'^profile/(?P<auth_user_id>[0-9]+)', views.UserProfile, name='profile'),
-    #/detail.
+    #/detail
 
     url(r'^admin/', admin.site.urls),
 
     url(r'^posts-add/(?P<auth_user_id>[0-9]+)', views.get_name, name='posts-add'),
+
+    url(r'^change_profile/(?P<auth_user_id>[0-9]+)', views.change_profile, name='change_profile'),
 ]

@@ -6,32 +6,33 @@
 
 {% block content %}
 
-
     {% if all_posts %}
 {% for user in all_posts|slice:":1:" %}
-    <div><h1 class="user_name"><u>{{ user.auth_user }}'s blog!</u></h1></div>
+    <div><h1 class="user_name">{{ user.auth_user }}'s blog!</h1></div>
 
     {% endfor %}
 
-    <ul>
-        {% for post in all_posts %}
-
-    <div class="post">
+{% for info in profile %}
+<div class="profile_info">
     <div class="container">
-            <div class="row">
-            <div class="col-sm-4"></div>
-            <div id="funkarinte" class="col-sm-4"><h1 id="title">{{ post.title }}</h1><h2 id="blog_post">{{ post.blog_post|safe }}</h2><h6>{{ post.time_date }}</h6><hr></div>
-            <div class="col-sm-4"></div>
+        <div class="row">
+            <div class="col-sm-6 test" ><img class="profile_pic" src="{{ info.profile_pic }}"><br>{{ info.profile_info }}</div>
+            <div class="col-sm-6">
+            {% for post in all_posts %}
+
+                    <h1 id="title">{{ post.title }}</h1>
+                    <h2 id="blog_post">{{ post.blog_post|safe }}</h2>
+                    <h6>{{ post.time_date }}</h6><hr>
+
+            {% endfor %}
         </div>
-
+        </div>
     </div>
-    </div>
+</div>
+{% endfor %}
 
 
 
-        {% endfor %}
-
-    </ul>
 {% else %}
         <div class="no_post">No posts found, try again later!</div>
 {% endif %}

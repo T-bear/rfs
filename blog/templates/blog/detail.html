@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-
-  <title>The HTML5 Herald</title>
+{% include "blog/includes/html_template.html" %}
+  <title>RFS</title>
   {% load staticfiles %}
 <link rel="stylesheet" href="{% static 'blog/style.css' %}" type='text/css'/>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-
-
 </head>
 
-<body>
+
 
    {% if user.is_authenticated %}
 
@@ -23,5 +17,3 @@
 {% include "blog/includes/navbar.html" %}
 {% include "blog/includes/blog_posts.html" %}
 
-</body>
-</html>
