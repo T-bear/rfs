@@ -26,4 +26,6 @@ urlpatterns = [
     url(r'^posts-add/(?P<auth_user_id>[0-9]+)', views.get_name, name='posts-add'),
 
     url(r'^change_profile/(?P<auth_user_id>[0-9]+)', views.change_profile, name='change_profile'),
+
+
 ]

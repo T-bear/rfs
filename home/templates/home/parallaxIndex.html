@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Recycling Fashion SHOW</title>
+{% load staticfiles %}
+  <link rel=“stylesheet” href=“https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css” integrity=“sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u” crossorigin=“anonymous”>
+  <link rel="stylesheet" href="{% static 'blog/bootstrap.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'blog/parallaxStyle.css' %}" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+  <script src="https://use.fontawesome.com/2bad560e67.js"></script>
+
+</head>
+
+      <body>
+        <!-- <div class="container"> -->
+          <!-- starter -->
+          <section class="parallax">
+            <div class="row header">
+              <div class="container">
+                <img id="logo" src="{% static 'blog/images/img/logga_vit.png'%}" alt="">
+                <img src="{% static 'blog/images/img/start/tjej_bubbla.png' %}" id="start_girl">
+
+                  <!-- navbar -->
+     <div class="container">
+       <ul class="topnav">
+         <li class="nav-item">
+           <a class="nav-link" href="#about"><img src="img/about.png" id="nav_icon" alt="Om oss"></a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="{% url 'blog:index' %}"><img src="img/blogg.png" id="nav_icon" alt="Blogg"></a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#lookbook"><img src="img/Lookbook.png" id="nav_icon" alt="Lookbook"></a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#form"> <img src="img/form.png" id="nav_icon" alt="Formulär"></a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#faq"> <img src="img/faq.png" id="nav_icon" alt="Faq"></a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#contact"> <img src="img/kontakt.png" id="nav_icon" alt="kontakt"></a>
+         </li>
+       </ul>
+     </div>
+   </div>
+   <!-- end navbar -->
+
+              </div>
+            </div>
+          </section>
+            <!-- end starter -->
+            <!-- om oss -->
+          <section class="parallax2">
+            <div class="row" id="about">
+              <div class="container">
+                  <img src="{% static 'blog/images/img/about/about_girl.png'%}" id="about_girl">
+              </div>
+            </div>
+          </section>
+            <!-- end om oss -->
+            <!-- lookbook -->
+          <section class="parallax3">
+            <div class="row" id="lookbook">
+              <div class="container">
+                  <img src="{% static 'blog/images/img/lookbook/lookbook_modell.png'%}" id="lookbook_girl">
+                  <img src="{% static 'blog/images/img/button/button_left.png'%}" id="arrow_l">
+                  <img src="{% static 'blog/images/img/lookbook/lookbook.png'%}" id="lookbook_book">
+                  <img src="{% static 'blog/images/img/button/button_right.png'%}" id="arrow_r">
+                  <img src="{% static 'blog/images/img/lookbook/lookbook_boxes.png'%}" id="boxes">
+              </div>
+            </div>
+          </section>
+            <!-- end lookbook -->
+            <!-- formulär -->
+          <section class="parallax4">
+            <div class="row" id="form">
+              <div class="container">
+                  <img src="{% static 'blog/images/img/form/form_modell.png'%}" id="form_girl">
+              </div>
+            </div>
+          </section>
+          <!-- end formulär -->
+          <!-- faq -->
+          <section class="parallax5">
+            <div class="row" id="faq">
+              <div class="container">
+                  <img src="{% static 'blog/images/img/faq/faq_modell.png'%}" id="faq_girl">
+              </div>
+            </div>
+          </section>
+          <!-- end faq -->
+          <!-- kontakt -->
+          <section class="parallax6">
+            <div class="row" id="contact">
+              <div class="container">
+                <img src="{% static 'blog/images/img/kontakt/kontakt_modell.png'%}" id="kontakt_girl">
+              </div>
+            </div>
+          </section>
+          <!-- end kontakt -->
+          <!-- footer -->
+          <div id="footer">
+              <h2>
+                Copyright <i class="fa fa-copyright" aria-hidden="true"></i>  Live Green 2017. developd by room 211
+              </h2>
+          </div>
+          <!-- end footer -->
+      </div>
+          <!-- include javascript, jQuery FIRST -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+      </body>
+
+      </html>
